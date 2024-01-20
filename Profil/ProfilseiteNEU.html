@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitU | Profile</title>
+    <link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="ProfilseiteNEU.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="ProfilseiteNEU.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Side navigation -->
+    <nav>
+        <div class="box">
+            <img src="../common/images/home.svg" alt="Icon" class="icon">
+            <a href="../Home/homescreen.html"> Home </a>
+        </div>
+        <div class="box">
+            <img src="../common/images/workout.svg" alt="Icon" class="icon">
+            <a href="../Workout/workoutsite.html"> Workouts </a>
+        </div>
+        <div class="box">
+            <img src="../common/images/user.svg" alt="Icon" class="icon">
+            <a href="ProfilseiteNEU.html"> Profile </a>
+        </div>
+        <div class="box">
+            <a id="logout">Logout</a>
+        </div>
+    </nav>
+
+    <main>
+        <header >
+            <h1>Profile Settings</h1>
+        </header>
+        <div class="tdee-container">
+            <h2>Update your personal tdee</h2>
+            <form id="calculaterForm">
+                <div class="input-icon">
+                    <input id="weight" placeholder="Weight" required>
+                    <img src="icons8-kg-50.png" class="icons email-icon" />
+                </div>
+                <div class="input-icon">
+                    <input id="height" placeholder="Height" required>
+                    <img src="icons8-cm-48.png" class="icons email-icon" />
+                </div>
+                <div class="input-icon">
+                    <input id="age" placeholder="Age" required>
+                </div>
+                <div class="dropdown">
+                    <select class="dropdown-content" id="sex" required>
+                        <option value="" disabled selected>Sex</option>"
+                        <option value="male">Male</option>"
+                        <option value="female">Female</option>"
+                    </select>
+                </div>
+                <div class="dropdown">
+                    <select class="dropdown-content" id="activitylevel" required>
+                        <option value="" disabled selected>Activity Level</option>"
+                        <option value="sedentary">Sedentary (Little or no exercise)</option>"
+                        <option value="lightexercise">Light exercise (1-2 times a week)</option>"
+                        <option value="moderateexercise">Moderate exercise (2-3 times a week)</option>"
+                        <option value="hardexercise">Hard exercise (4-5 times a weak)</option>"
+                        <option value="physicaljob">Physical job or hard exercise (6-7 times a week)</option>"
+                        <option value="professionalathelete">Professional athlete</option>"
+                    </select>
+                </div>
+                <button class="button calculate-button" type="submit">Calculate new</button>
+            </form>
+        </div>
+
+
+
+        <div class="Account-Settings">
+            <h2>Update your account Settings</h2>
+            <!-- Weitere Inhalte der Account-Settings -->
+            <div class="accountinput">
+                <input id="name" placeholder="Name" required>
+                <img src="icons8-bearbeiten-96.png" class="icons name-icon" data-popup="editNamePopup"
+                    onclick="openEditPopup('editNamePopup')">
+            </div>
+            <div class="accountinput">
+                <input id="surname" placeholder="Surname" required>
+                <img src="icons8-bearbeiten-96.png" class="icons surname-icon" data-popup="editSurnamePopup"
+                    onclick="openEditPopup('editSurnamePopup')">
+            </div>
+            <div class="accountinput">
+                <input id="email" placeholder="Email Adress" required>
+                <img src="icons8-bearbeiten-96.png" class="icons email-icon" data-popup="editEmailPopup"
+                    onclick="openEditPopup('editEmailPopup')">
+            </div>
+            <div class="accountinput">
+                <input id="Password1" placeholder="************************" required>
+                <img src="icons8-bearbeiten-96.png" class="icons password-icon" data-popup="editPasswordPopup"
+                    onclick="openEditPopup('editPasswordPopup')">
+            </div>
+
+            <button class="button delete-button" data-popup="editDeleteAccountPopup"
+                onclick="openEditPopup('DeleteAccountPopup')">Delete account</button>
+
+        </div>
+
+        <!-- Pop-up für die Bearbeitung von Name, Nachname und E-Mail -->
+        <div class="edit-popup" id="editNamePopup">
+            <div class="edit-popup-content">
+                <span class="close" onclick="closePopup('editNamePopup')">&times;</span>
+                <h3>Edit Name</h3>
+                <input id="newName" placeholder="New Name">
+                <button class="button" onclick="applyChanges('name')">Apply Changes</button>
+            </div>
+        </div>
+
+        <div class="edit-popup" id="editSurnamePopup">
+            <div class="edit-popup-content">
+                <span class="close" onclick="closePopup('editSurnamePopup')">&times;</span>
+                <h3>Edit Surname</h3>
+                <input id="newSurname" placeholder="New Surname">
+                <button class="button" onclick="applyChanges('surname')">Apply Changes</button>
+            </div>
+        </div>
+
+        <div class="edit-popup" id="editEmailPopup">
+            <div class="edit-popup-content">
+                <span class="close" onclick="closePopup('editEmailPopup')">&times;</span>
+                <h3>Change Email</h3>
+                <input id="newEmail" placeholder="New Email">
+                <button class="button" onclick="applyChanges('email')">Apply Changes</button>
+            </div>
+        </div>
+
+        <!-- Pop-up für die Passwortänderung -->
+        <div class="edit-popup" id="editPasswordPopup">
+            <div class="edit-popup-content">
+                <span class="close" onclick="closePopup('editPasswordPopup')">&times;</span>
+                <h3>Change Password</h3>
+                <input type="password" id="currentPassword" placeholder="Current Password">
+                <input type="password" id="newPassword" placeholder="New Password">
+                <input type="password" id="confirmNewPassword" placeholder="Confirm New Password">
+                <button class="button" onclick="applyChanges('password')">Apply Changes</button>
+            </div>
+        </div>
+
+        <!-- Pop-up für die Bestätigung der Account-Löschung -->
+        <div class="edit-popup" id="DeleteAccountPopup">
+            <div class="edit-popup-content">
+                <span class="close" onclick="closePopup('DeleteAccountPopup')">&times;</span>
+                <h3>Are you sure that you want to delete your account?</h3>
+                <button class="button" onclick="applyChanges('deleteaccount')">Yes</button>
+                <button class="button" onclick="applyChanges('dontdeleteaccount')">No</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

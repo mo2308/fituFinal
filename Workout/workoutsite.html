@@ -1,0 +1,108 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitU</title>
+    <link rel="stylesheet" href="../common/common.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="stylesworkoutsite.css">
+</head>
+
+<body>
+
+    <!-- Side navigation -->
+    <nav>
+        <div class="box">
+            <img src="../common/images/home.svg" alt="Icon" >
+            <a href="../Home/homescreen.html"> Home </a>
+        </div>
+        <div class="box">
+            <img src="../common/images/workout.svg" alt="Icon" >
+            <a href="workoutsite.html"> Workouts </a>
+        </div>
+        <div class="box">
+            <img src="../common/images/user.svg" alt="Icon" >
+            <a href="../Profil/ProfilseiteNEU.html"> Profile </a>
+        </div>
+        <div class="box">
+            <a id="logout">Logout</a>
+        </div>
+    </nav>
+
+    <div class="workoutseite">
+        <h1>Find the right workout</h1>
+        <p><br><br><hr></p>
+          
+        <div class="trainingsKategorie">
+        <h2>What do you want to train?</h2>
+            <div class="fullbody">
+                <input id="confirm1" type="checkbox" /><label for="confirm1">Full body</label>
+            </div>
+            <div class="upperbody">   
+                <input id="confirm2" type="checkbox" /><label for="confirm2">Upper body</label>
+            </div> 
+            <div class="core">   
+                <input id="confirm3" type="checkbox" /><label for="confirm3">Core</label>
+            </div> 
+            <div class="legs">   
+                <input id="confirm4" type="checkbox" /><label for="confirm4">Legs</label>
+            </div> 
+            <div class="arms">   
+                <input id="confirm5" type="checkbox" /><label for="confirm5">Arms</label>
+            </div> 
+            <div class="chest">   
+                <input id="confirm6" type="checkbox" /><label for="confirm6">Chest</label>
+            </div> 
+            <div class="back">   
+                <input id="confirm7" type="checkbox" /><label for="confirm7">Back</label>
+            </div>
+        </div> 
+        <br><br><br><br><p><br><br><br><br><hr>
+
+        <div class="Linkeseite">
+        <h2>Workout Type</h2>
+            <div class="zuhause">
+                <input id="confirm8" type="checkbox" /><label for="confirm8">Home</label>
+            </div>
+            <div class="fitnessstudio">   
+                <input id="confirm9" type="checkbox" /><label for="confirm9">Gym</label>
+            </div> 
+        </div>
+        
+        <div class="Rechteseite">
+        <h2>Fitnesslevel</h2>
+            <div class="Beginner">
+                <input id="confirm10" type="checkbox" /><label for="confirm10">Beginner</label>
+            </div>
+            <div class="Erfahren"> 
+                <input id="confirm11" type="checkbox" /><label for="confirm11">Intermediate</label>
+            </div> 
+            <div class="Profi">
+                <input id="confirm12" type="checkbox" /><label for="confirm12">Profi</label>
+            </div>
+        </div>    
+        <br><br><br><br><p><br><br><br><br><hr>
+        
+            <form id="searchForm">
+                
+                <input type="submit" value="Search">
+    
+            </form>
+       
+        
+
+
+
+
+        
+    </div>
+
+    <script src="workoutsitescript.js"></script>
+</body>
+
+</html>

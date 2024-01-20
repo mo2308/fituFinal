@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitU | Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="styleslogin.css">
+    <script src="loginscript.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="image-section">
+            <img src="BackgroundSignIn.jpeg" alt="Placeholder Image">
+        </div>
+        <div class="login-section">
+            <div class="login-container">
+                <h2 class="text">Log in</h2>
+                <p class="text">Sign in to track your progress</p>
+                <form id="loginForm">
+                    
+                    <label class="text" for="email">Enter your Email Address</label>
+                    <div class="input-icon">
+                        <input class="input" type="email" id="email" placeholder="example@mail.com" required>
+                        <img src="icons8-brief-50.png" class="icons email-icon" />
+                    </div>
+                    
+                    <label class="text" for="password">Enter your password</label>
+                    <div class="input-icon">      
+                        <input class="input" type="password" id="password" placeholder="*************************" required>
+                        <img src="icons8-unsichtbar-60.png" class="icon toggle-password" onclick="togglePassword()" />
+                    </div>
+                        
+                    <p id="message" class="errorMessage"></p>
+
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="rememberMe" class="checkbox-input">
+                        <label for="rememberMe" class="custom-checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            Remember me
+                        </label>
+                        <a href="../Password Reset/password-reset.html" class="text forgot-password">Forgot password?</a>
+                    </div>
+                    <button class="button" type="submit">Log in</button>
+                </form>
+                <p class="text">Don't have an account? <a href="../SignUp/signupscreen.html" class="text Signup">Sign up</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

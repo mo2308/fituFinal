@@ -1,0 +1,222 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.tdee-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tdee-container {
+    width: 20%;
+    padding: 20px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.text {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+}
+.text1 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 24px;
+}
+.text2 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 14px;
+}
+.text3 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 16px;
+    line-height: 16px;
+}
+.text4 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+}
+.text5 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+.text6 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 22px;
+    line-height: 0px;
+}
+.text7 {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+    font-size: 12px;
+}
+
+
+h2.text {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 58px;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+input.input {
+    width: 100%; /* Änderung für bessere Anpassung */
+    height: 48px;
+    padding: 0px 8px;
+    border: 1px solid #383838;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #1b1b1b;
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+
+
+.dropdown {
+    width: 100%;
+    height: 48px;
+    position: relative;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    background-color: #1b1b1b;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dropdown-content {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px; /* Gibt Platz auf der rechten Seite für das Bild */
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #1b1b1b; 
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 12px;
+    outline: none;
+    background-image: url('icons8-pfeil-nach-unten-30.png');
+    background-repeat: no-repeat;
+    background-position: right 30px center; /* Position des Pfeil-Icons */
+    background-size: 20px; /* Größe des Pfeil-Icons */
+}
+
+/* Entfernen des Standard-Pfeils für IE */
+.dropdown-content::-ms-expand {
+    display: none;
+}
+
+
+/* Icons */
+.input-icon {
+    position: relative;
+}
+
+.input {
+    /* ... Vorhandene Stile ... */
+    padding-right: 40px; /* genug Platz für das Icon */
+}
+
+.icon {
+    position: absolute;
+    top: 40%;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+.icons {
+    position: absolute;
+    top: 40%;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+}
+
+
+.button {
+    width: 100%; /* Änderung für bessere Anpassung */
+    height: 48px;
+    padding: 0px 8px;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #db0e0d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* ... */
+.hidden {
+    display: none;
+}
+
+
+.result-section{
+    width: 20%;
+}
+
+.results-box {
+    background-color: #2c2c2c; /* Or any color you prefer */
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.start-over-button {
+    width: 100%; 
+    height: 48px;
+    padding: 0px 8px;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #db0e0d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+}

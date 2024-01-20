@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitU | Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="stylessignup.css">
+    <script src="signupscript.js"></script>
+</head>
+<body>
+        <div class="signup-section">
+            <div class="signup-container">
+                <h2 class="text">Sign up</h2>
+                <p class="text">Enter your data to continue</p>
+                
+                <form id="signupForm">    
+                    <label class="text" for="name">Name</label>
+                    <div class="input-icon">
+                        <input class="input" type="text" id="name" placeholder="Name" required>
+                        <img src="icons8-personalausweis-24.png" class="icons email-icon" />
+                    </div>
+
+                    <label class="text" for="surname">Surname</label>
+                    <div class="input-icon">
+                        <input class="input" type="text" id="surname" placeholder="Surname" required>
+                        <img src="icons8-personalausweis-24.png" class="icons email-icon" />
+                    </div>
+
+                    <label class="text" for="email">Enter your Email Address</label>
+                    <div class="input-icon">
+                        <input class="input" type="email" id="email" placeholder="Enter your email" required>
+                        <img src="icons8-brief-50.png" class="icons email-icon" />
+                    </div>
+                    
+                    <label class="text" for="password">Create password</label>
+                    <div class="input-icon">      
+                        <input class="input" type="password" id="password" placeholder="*************************" required>
+                        <img src="icons8-unsichtbar-60.png" class="icon toggle-password" onclick="togglePassword()" />
+                    </div>
+
+                    <label class="text" for="password">Confirm password</label>
+                    <div class="input-icon">      
+                        <input class="input" type="password" id="confirmPassword" placeholder="*************************" required>
+                        <img src="icons8-sperren-30.png" class="icons toggle-password" />
+                    </div>
+                        
+                    <p id="passwordError" class="errorMessage"></p>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" class="checkbox-input">
+                        <label for="terms" class="custom-checkbox-label">
+                            <span class="custom-checkbox"></span>
+                            I agree with the Terms of Service and Privacy Policy
+                        </label>
+                    </div>
+                    <button class="button" type="submit">Sign up</button>
+                </form>
+                <p class="text">You already have a account? <a href="loginscreen.html" class="text Signup">Log in</a></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

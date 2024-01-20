@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitU | TDEE Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <link rel="stylesheet" href="stylestdeecalculator.css">
+    <script src="tdeecalculatorscript.js"></script>
+</head>
+<body>
+        <div class="tdee-section">
+            <div class="tdee-container">
+                <h2 class="text">Last step before you can get started...</h2>
+                <p class="text">Estimate how many calories you burn daily</p>
+                
+                <form id="calculaterForm">    
+                    <div class="input-icon">
+                        <input class="input" type="text" id="weight" placeholder="Weight" required>
+                        <img src="icons8-kg-50.png" class="icons email-icon" />
+                    </div>
+
+                    <div class="input-icon">
+                        <input class="input" type="text" id="height" placeholder="Height" required>
+                        <img src="icons8-cm-48.png" class="icons email-icon" />
+                    </div>
+
+                    <div class="input-icon">
+                        <input class="input" type="text" id="age" placeholder="Age" required>
+                    </div>
+                    
+                    <div class="dropdown">      
+                        <select class="dropdown-content" id="sex" required>
+                            <option value="" disabled selected>Sex</option>"
+                            <option value="male">Male</option>"
+                            <option value="female">Female</option>"
+                        </select>
+                    </div>
+
+                    <div class="dropdown">      
+                        <select class="dropdown-content" id="activitylevel" required>
+                            <option value="" disabled selected>Activity Level</option>"
+                            <option value="sedentary">Sedentary (Little or no exercise)</option>"
+                            <option value="lightexercise">Light exercise (1-2 times a week)</option>"
+                            <option value="moderateexercise">Moderate exercise (2-3 times a week)</option>"
+                            <option value="hardexercise">Hard exercise (4-5 times a weak)</option>"
+                            <option value="physicaljob">Physical job or hard exercise (6-7 times a week)</option>"
+                            <option value="professionalathelete">Professional athlete</option>"
+                        </select>
+                    </div>                   
+                    <button class="button calculate-button" type="submit">Calculate</button>
+                </form>
+            </div>
+
+          <!-- Hidden result section that will be displayed after calculation -->
+          <div class="result-section hidden">
+            <h3 class="text1">Your results</h3>
+            <p class="text2">Remember this estimate is based on your body weight, height, age, gender, and average level of activity. Other factors can also affect these results such as your genetics, diet, training history and muscle mass.</p>
+            <div class="results-box">
+                <p class="text3">BASAL METABOLIC RATE (BMR)</p>
+                <p id="bmrresult" class="text4"></p>
+                <p class="text5">TOTAL DAILY ENERGY EXPENDITURE (TDEE)</p>
+                <p id="tdeeresult" class="text6"></p>
+            </div>
+            <p class="text7">This is an estimate only. This tool is not a substitute for accurate BMR measurement or TDEE results provided by a certified specialist. Your actual needs may differ from these results.</p>
+            <button class="button start-over-button" onclick="window.location.href='../LogIn/loginscreen.html';">Login</button>
+            <button class="button start-over-button" onclick="window.location.href='ProfilseiteNEU.html';">Start Over</button>
+        </div>
+    </div>
+    <script src="tdeecalculatorscript.js"></script>
+</body>
+</html>
