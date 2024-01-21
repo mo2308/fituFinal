@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Workouts to Database</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <link rel="stylesheet" href="stylessaveworkoutstofirebase.css">
+</head>
+<body>
+
+
+    <div class="addworkouts-section">
+        <div class="addworkouts-container">
+            <h2 class="text">Add workouts to database</h2>
+            
+            <form id="addworkoutsForm">    
+                <label class="text" for="documentname">Document Name</label>
+                    <input class="input" type="text" id="documentname" placeholder="workoutcategory-workouttype-level-id" required>
+                
+
+                <label class="text" for="category">Workout category</label>
+                <div class="dropdown">      
+                    <select class="dropdown-content" id="category" required>
+                        <option value="" disabled selected>Workout category</option>"
+                        <option value="Full body">Full body</option>"
+                        <option value="Upper body">Upper body</option>"
+                        <option value="Core">Core</option>"
+                        <option value="Legs">Legs</option>"
+                        <option value="Arms">Arms</option>"
+                        <option value="Chest">Chest</option>"
+                        <option value="Back">Back</option>"
+                    </select>
+                </div>   
+
+                
+                <label class="text" for="duration">Workout duration</label>     
+                    <input class="input" type="text" id="duration" placeholder="e.g. '50min'" required>
+
+                <label class="text" for="level">Fitness level</label>
+                <div class="dropdown">      
+                    <select class="dropdown-content" id="level" required>
+                        <option value="" disabled selected>Fitness level</option>"
+                        <option value="Beginner">Beginner</option>"
+                        <option value="Intermediate">Intermediate</option>"
+                        <option value="Profi">Profi</option>"
+                    </select>
+                </div> 
+
+                <label class="text" for="name">Workout Name</label>   
+                    <input class="input" type="text" id="name" placeholder="Chests Best" required>
+
+                <label class="text" for="type">Workout type</label>
+                <div class="dropdown">      
+                    <select class="dropdown-content" id="type" required>
+                        <option value="" disabled selected>Workout type</option>"
+                        <option value="Home">Home</option>"
+                        <option value="Gym">Gym</option>"
+                    </select>
+                </div> 
+                    
+                <p id="passwordError" class="errorMessage"></p>
+            
+                <button class="button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="saveworkoutstofirebase.js"></script>
+</body>
+</html>
+

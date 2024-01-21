@@ -1,0 +1,102 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.text {
+    color: #ffffff;
+    font-family: "Poppins";
+    text-align: center;
+}
+
+h2.text {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 10px;
+}
+
+input.input {
+    width: 100%; /* Änderung für bessere Anpassung */
+    height: 48px;
+    padding: 0px 8px;
+    border: 1px solid #383838;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #1b1b1b;
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* Fehlermeldung anzeigen */
+.errorMessage {
+    color: #db0e0d;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    display: none; /* Verstecken, bis es benötigt wird */
+    text-align: center; /* Zentriert die Fehlermeldung */
+}
+
+.button {
+    width: 100%; /* Änderung für bessere Anpassung */
+    height: 48px;
+    padding: 0px 8px;
+    border: 0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    background-color: #db0e0d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+
+.dropdown {
+    width: 100%;
+    height: 48px;
+    position: relative;
+    border: 1px solid #383838;
+    border-radius: 12px;
+    background-color: #1b1b1b;
+    margin-bottom: 10px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.dropdown-content {
+    width: 100%;
+    height: 48px;
+    padding: 0 16px; /* Gibt Platz auf der rechten Seite für das Bild */
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #1b1b1b; 
+    color: #bebebe;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 12px;
+    outline: none;
+    background-image: url('icons8-pfeil-nach-unten-30.png');
+    background-repeat: no-repeat;
+    background-position: right 30px center; /* Position des Pfeil-Icons */
+    background-size: 20px; /* Größe des Pfeil-Icons */
+}
+
+/* Entfernen des Standard-Pfeils für IE */
+.dropdown-content::-ms-expand {
+    display: none;
+}
